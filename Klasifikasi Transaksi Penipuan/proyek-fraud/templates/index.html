@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deteksi Fraud</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 50px; }
+        form { display: inline-block; text-align: left; border: 1px solid #ccc; padding: 20px; border-radius: 10px; }
+        .btn { background: blue; color: white; padding: 10px 20px; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>🛡️ Cek Transaksi Fraud</h1>
+    <form action="/predict" method="post">
+        <label>Pendapatan (Income):</label><br>
+        <input type="number" name="income" required><br><br>
+        
+        <label>Pekerjaan (Profession):</label><br>
+        <select name="profession">
+            <option value="Doctor">Doctor</option>
+            <option value="Teacher">Teacher</option>
+            <option value="Programmer">Programmer</option>
+        </select><br><br>
+        
+        <button type="submit" class="btn">Analisis Sekarang</button>
+    </form>
+
+    <h2>{{ prediction_text }}</h2>
+</body>
+</html>
