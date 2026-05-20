@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Iris Species Predictor</title>
+    <style>
+        body { font-family: Arial; text-align: center; margin-top: 50px; background-color: #f4f4f9; }
+        form { display: inline-block; background: white; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px #ccc; }
+        input { margin: 10px; padding: 10px; width: 200px; display: block; }
+        button { padding: 10px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Prediksi Spesies Bunga Iris</h1>
+    <p>Masukkan ukuran kelopak dan mahkota bunga:</p>
+
+    <form action="/predict" method="post">
+        <input type="text" name="sl" placeholder="Sepal Length (cm)" required>
+        <input type="text" name="sw" placeholder="Sepal Width (cm)" required>
+        <input type="text" name="pl" placeholder="Petal Length (cm)" required>
+        <input type="text" name="pw" placeholder="Petal Width (cm)" required>
+        <button type="submit">Tebak Spesies!</button>
+    </form>
+
+    <h2>{{ prediction_text }}</h2>
+</body>
+</html>

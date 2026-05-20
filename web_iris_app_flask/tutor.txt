@@ -1,0 +1,8 @@
+Cara Menjalankan Web Anda
+1. Buka Terminal atau Command Prompt di dalam folder web_iris_app.
+2. Pastikan Anda sudah menginstall Flask:
+pip install flask numpy scikit-learn
+3. Jalankan aplikasinya:
+python app.py
+4. Terminal akan memberikan link seperti [http://127.0.0.1:5000/](http://127.0.0.1:5000/).
+5. Copy-paste link tersebut ke browser Anda. Selesai! Web ML pertama Anda sudah live secara lokal.
